@@ -93,12 +93,14 @@ var DailyRotateFile = function (options) {
 
         if (options.zippedArchive) {
             this.logStream.on('rotate', function (oldFile) {
-                var gzip = zlib.createGzip();
-                var inp = fs.createReadStream(oldFile);
-                var out = fs.createWriteStream(oldFile + '.gz');
-                inp.pipe(gzip).pipe(out).on('finish', function () {
-                    fs.unlinkSync(oldFile);
-                });
+                setTimeout(function () {
+                    var gzip = zlib.createGzip();
+                    var inp = fs.createReadStream(oldFile);
+                    var out = fs.createWriteStream(oldFile + '.gz');
+                    inp.pipe(gzip).pipe(out).on('finish', function () {
+                        fs.unlinkSync(oldFile);
+                    });
+                }, 100);
             });
         }
     }
