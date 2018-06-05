@@ -39,7 +39,7 @@
     "rimraf": "2.5.2"
   },
   "dependencies": {
-    "file-stream-rotator": "^0.2.1",
+    "file-stream-rotator": "github:mattberther/file-stream-rotator#4382569",
     "semver": "^5.5.0",
     "triple-beam": "^1.1.0",
     "winston-compat": "^0.1.3",
