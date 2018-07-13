@@ -40,7 +40,7 @@
     "rimraf": "2.5.2"
   },
   "dependencies": {
-    "file-stream-rotator": "https://github.com/nickbug/file-stream-rotator.git",
+    "file-stream-rotator": "https://github.com/nickbug/file-stream-rotator.git#292c353428bc5f2b8d9100f63738c1a94c581bca",
     "semver": "^5.5.0",
     "triple-beam": "^1.3.0",
     "winston-compat": "^0.1.4",
